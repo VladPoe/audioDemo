@@ -1,0 +1,6 @@
+// scss-lint:disable IdSelector
+// #svg-icon-placeholder может быть тольлко один на странице, поэтому селектор по id тут уместен
+#svg-icon-placeholder {
+    width: 0;
+    height: 0;
+}

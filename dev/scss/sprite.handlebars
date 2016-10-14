@@ -1,0 +1,19 @@
+{{#sprites}}
+.icon-{{name}}{
+    display: block;
+    background-image: url($img-src + '{{{escaped_image}}}') !important;
+    background-repeat: no-repeat;
+    background-position: ({{px.offset_x}}/2) ({{px.offset_y}}/2);
+    background-size: ({{px.total_width}}/2) ({{px.total_height}}/2);
+    width: ({{px.width}}/2);
+    height: ({{px.height}}/2);
+}
+
+.icon-{{name}}--noretina{
+    background-position: {{px.offset_x}} {{px.offset_y}};
+    background-size: {{px.total_width}} {{px.total_height}};
+    width: {{px.width}};
+    height: {{px.height}};
+}
+
+{{/sprites}}

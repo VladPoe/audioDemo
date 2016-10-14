@@ -1,0 +1,27 @@
+// viewports
+$screen-sm: 768px;
+$screen-md: 990px;
+
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+@mixin adaptive($point) {
+
+    $adaptive-sm: '(min-width: ' + $screen-sm + ')';
+    $adaptive-md: '(min-width: ' + $screen-md + ')';
+
+    @if $point == sm {
+        @media #{$adaptive-sm} {
+            @content;
+        }
+    } @else if $point == md {
+        @media #{$adaptive-md} {
+            @content;
+        }
+    }
+}
